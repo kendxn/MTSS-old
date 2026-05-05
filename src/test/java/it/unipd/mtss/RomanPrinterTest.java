@@ -1,3 +1,8 @@
+////////////////////////////////////////////////////////////////////
+// Daxin Chen 2148627
+// Aurelio Rrena [MATRICOLA2]
+////////////////////////////////////////////////////////////////////
+/// 
 package it.unipd.mtss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -7,7 +12,7 @@ public class RomanPrinterTest {
     
 
 @Test
-public void testPrintLineCount() {
+public void stampaFinoTre() {
     String result = RomanPrinter.print(3); // III
     String[] lines = result.split("\n");
     assertEquals(6, lines.length);
