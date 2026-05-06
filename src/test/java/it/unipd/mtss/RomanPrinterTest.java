@@ -11,11 +11,29 @@ import org.junit.jupiter.api.Test;
 public class RomanPrinterTest {
     
 
+public void testPrint_ShouldReturnAsciiI_WhenInputIsOne() {
+        String expected = 
+            "  I  \n" +
+            "  I  \n" +
+            "  I  \n" +
+            "  I  \n" +
+            "  I  \n" +
+            "  I  \n";
+        String actual = RomanPrinter.print(1);
+        assertEquals(expected, actual);
+    }
+
 @Test
-public void stampaFinoTre() {
-    String result = RomanPrinter.print(3); // III
-    String[] lines = result.split("\n");
-    assertEquals(6, lines.length);
+public void testPrint_ShouldReturnAsciiV_WhenInputIsFive() {
+    String expected = 
+        "V   V\n" +
+        "V   V\n" +
+        " V V \n" +
+        " V V \n" +
+        "  V  \n" +
+        "  V  \n";
+    String actual = RomanPrinter.print(5);
+    assertEquals(expected, actual);
 }
 
 }
