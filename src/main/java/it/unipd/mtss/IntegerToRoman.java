@@ -10,19 +10,28 @@ import java.util.TreeMap;
 public class IntegerToRoman {
 
 
-    public final static TreeMap<Integer, String> map = new TreeMap<Integer, String>();
+    public static TreeMap<Integer, String> keys = new TreeMap<Integer, String>();
 
     static {
-
-        map.put(1, "I");
+        keys.put(1, "I");
+        keys.put(4, "IV");
+        keys.put(5, "V");
 
     }
 
-    public static String convert(int number) {
-        int l =  map.floorKey(number);
-        if ( number == l ) {
-            return map.get(number);
-        }
-        return map.get(l) + convert(number-l);
+public static String convert(int number) {
+    StringBuilder result = new StringBuilder();
+    
+    while (number > 0) {
+        Integer l = keys.floorKey(number);
+        
+        if (l == null)  break; 
+        result.append(keys.get(l));
+        
+        number -= l;
     }
+    
+    return result.toString();
+}
+
 }
