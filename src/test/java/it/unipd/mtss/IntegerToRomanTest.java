@@ -6,7 +6,8 @@
 package it.unipd.mtss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals; 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 public class IntegerToRomanTest {
@@ -31,5 +32,43 @@ public class IntegerToRomanTest {
         String quattro=ir.convert(4);
         assertEquals("IV", quattro);
    
-    }  
+    }
+    
+    @Test
+    void testConvert_ShouldReturnV_WhenInputIsFive() {
+        int number = 5;
+        String expected = "V";
+        String actual = IntegerToRoman.convert(number);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testConvert_ShouldReturnIX_WhenInputIsNine() {
+        int number = 9;
+        String expected = "IX";
+        String actual = IntegerToRoman.convert(number);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testConvert_ShouldReturnX_WhenInputIsTen() {
+        int number = 10;
+        String expected = "X";
+        String actual = IntegerToRoman.convert(number);
+        assertEquals(expected, actual);
+    }
+    
+    @Test
+    void testConvert_ShouldThrowException_WhenInputIsZero() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            IntegerToRoman.convert(0);
+        });
+    }
+
+    @Test
+    void testConvert_ShouldThrowException_WhenInputIsNegative() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            IntegerToRoman.convert(-1);
+        });
+    }
 }

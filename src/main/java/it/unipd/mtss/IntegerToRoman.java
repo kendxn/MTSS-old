@@ -9,17 +9,25 @@ import java.util.TreeMap;
 
 public class IntegerToRoman {
 
-
-    public static TreeMap<Integer, String> keys = new TreeMap<Integer, String>();
+    // Reso private e final per maggiore sicurezza
+    private static final TreeMap<Integer, String> keys = new TreeMap<Integer, String>();
 
     static {
         keys.put(1, "I");
         keys.put(4, "IV");
         keys.put(5, "V");
+        
+        keys.put(9, "IX");
+        keys.put(10, "X");
 
     }
 
 public static String convert(int number) {
+    
+    if (number <= 0 || number > 1000) {
+        throw new IllegalArgumentException("Il numero deve essere compreso tra 1 e 1000");
+    }
+    
     StringBuilder result = new StringBuilder();
     
     while (number > 0) {
