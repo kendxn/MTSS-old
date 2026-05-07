@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////
 // Daxin Chen 2148627
-// Aurelio Rrena [MATRICOLA2]
+// Aurelio Rrena 2147993
 ////////////////////////////////////////////////////////////////////
 
 package it.unipd.mtss;
@@ -10,7 +10,7 @@ import java.util.TreeMap;
 public class IntegerToRoman {
 
 
-    public static TreeMap<Integer, String> keys = new TreeMap<Integer, String>();
+    private static final TreeMap<Integer, String> keys = new TreeMap<Integer, String>();
 
     static {
         keys.put(1, "I");
@@ -21,6 +21,10 @@ public class IntegerToRoman {
 
 public static String convert(int number) {
     StringBuilder result = new StringBuilder();
+    
+    if (number <= 0 || number > 1000) {
+        throw new IllegalArgumentException("Il numero deve essere compreso tra 1 e 1000");
+    }
     
     while (number > 0) {
         Integer l = keys.floorKey(number);
