@@ -83,6 +83,26 @@ public class IntegerToRomanTest {
         assertEquals("XX", venti);
     }
     
+    @Test
+    void convertTwentyOneToFifty() {    
+        IntegerToRoman ir = new IntegerToRoman();
+        
+        String trentanove = ir.convert(39);
+        assertEquals("XXXIX", trentanove);
+        
+        String quaranta = ir.convert(40);
+        assertEquals("XL", quaranta);
+        
+        String quarantaquattro = ir.convert(44);
+        assertEquals("XLIV", quarantaquattro);
+        
+        String quarantanove = ir.convert(49);
+        assertEquals("XLIX", quarantanove);
+        
+        String cinquanta = ir.convert(50);
+        assertEquals("L", cinquanta);
+    }
+    
     
     @Test
     void testConvert_ShouldThrowException_WhenInputIsZero() {
