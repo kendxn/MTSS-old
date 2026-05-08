@@ -140,6 +140,23 @@ public class IntegerToRomanTest {
         assertEquals("D", cinquecento);
     }
     
+    @Test
+    void convertFiveHundredOneToOneThousand() {    
+        IntegerToRoman ir = new IntegerToRoman();
+        
+        String ottocentonovantanove = ir.convert(899);
+        assertEquals("DCCCXCIX", ottocentonovantanove);
+        
+        String novecento = ir.convert(900);
+        assertEquals("CM", novecento);
+        
+        String novecentonovantanove = ir.convert(999);
+        assertEquals("CMXCIX", novecentonovantanove);
+        
+        String mille = ir.convert(1000);
+        assertEquals("M", mille);
+    }
+    
     
     @Test
     void testConvert_ShouldThrowException_WhenInputIsZero() {
