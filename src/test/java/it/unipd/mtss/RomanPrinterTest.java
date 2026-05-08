@@ -137,6 +137,32 @@ public void testPrint_ShouldReturnAsciiV_WhenInputIsFive() {
         String actual = RomanPrinter.print(100);
         assertEquals(expected, actual);
     }
+    
+    @Test
+    public void testPrint_ShouldReturnAsciiCD_WhenInputIsFourHundred() {
+        String expected = 
+            " CCCCDDDD \n" +
+            "C    D   D\n" +
+            "C    D   D\n" +
+            "C    D   D\n" +
+            "C    D   D\n" +
+            " CCCCDDDD \n";
+        String actual = RomanPrinter.print(400);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testPrint_ShouldReturnAsciiD_WhenInputIsFiveHundred() {
+        String expected = 
+            "DDDD \n" +
+            "D   D\n" +
+            "D   D\n" +
+            "D   D\n" +
+            "D   D\n" +
+            "DDDD \n";
+        String actual = RomanPrinter.print(500);
+        assertEquals(expected, actual);
+    }
 
 @Test
     public void testPrint_ShouldThrowException_WhenInputIsInvalid() {
