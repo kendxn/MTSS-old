@@ -163,6 +163,32 @@ public void testPrint_ShouldReturnAsciiV_WhenInputIsFive() {
         String actual = RomanPrinter.print(500);
         assertEquals(expected, actual);
     }
+    
+    @Test
+    public void testPrint_ShouldReturnAsciiCM_WhenInputIsNineHundred() {
+        String expected = 
+            " CCCCM   M\n" +
+            "C    MM MM\n" +
+            "C    M M M\n" +
+            "C    M   M\n" +
+            "C    M   M\n" +
+            " CCCCM   M\n";
+        String actual = RomanPrinter.print(900);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testPrint_ShouldReturnAsciiM_WhenInputIsOneThousand() {
+        String expected = 
+            "M   M\n" +
+            "MM MM\n" +
+            "M M M\n" +
+            "M   M\n" +
+            "M   M\n" +
+            "M   M\n";
+        String actual = RomanPrinter.print(1000);
+        assertEquals(expected, actual);
+    }
 
 @Test
     public void testPrint_ShouldThrowException_WhenInputIsInvalid() {

@@ -86,6 +86,16 @@ public class RomanPrinter {
                     "DDDD "
                 };
                 return d[row];
+            case 'M':
+                String[] m = {
+                    "M   M",
+                    "MM MM",
+                    "M M M",
+                    "M   M",
+                    "M   M",
+                    "M   M"
+                };
+                return m[row];
             default:
                 return "";
             
