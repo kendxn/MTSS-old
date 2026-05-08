@@ -41,7 +41,29 @@ public class IntegerToRomanTest {
         IntegerToRoman ir = new IntegerToRoman();
         String quattro=ir.convert(4);
         assertEquals("IV", quattro);
+        
+        String cinque = ir.convert(5);
+        assertEquals("V", cinque);
+        
+        String sei = ir.convert(6);
+        assertEquals("VI", sei);
    
+    }
+    
+    @Test
+    void convertSevenToTen() {    
+        IntegerToRoman ir = new IntegerToRoman();
+        String sette = ir.convert(7);
+        assertEquals("VII", sette);
+        
+        String otto = ir.convert(8);
+        assertEquals("VIII", otto);
+        
+        String nove = ir.convert(9);
+        assertEquals("IX", nove);
+        
+        String dieci = ir.convert(10);
+        assertEquals("X", dieci);
     }
     
     
