@@ -56,6 +56,16 @@ public class RomanPrinter {
                     "X   X"
                 };
                 return x[row];
+            case 'L': 
+                String[] l = {
+                    "L    ",
+                    "L    ",
+                    "L    ",
+                    "L    ",
+                    "L    ",
+                    "LLLLL"
+                };
+                return l[row];
             default:
                 return "";
             
