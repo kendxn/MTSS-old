@@ -66,6 +66,16 @@ public class RomanPrinter {
                     "LLLLL"
                 };
                 return l[row];
+            case 'C':
+                String[] c_char = {
+                    " CCCC",
+                    "C    ",
+                    "C    ",
+                    "C    ",
+                    "C    ",
+                    " CCCC"
+                };
+                return c_char[row];
             default:
                 return "";
             

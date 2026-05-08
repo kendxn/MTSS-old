@@ -111,6 +111,32 @@ public void testPrint_ShouldReturnAsciiV_WhenInputIsFive() {
         String actual = RomanPrinter.print(50);
         assertEquals(expected, actual);
     }
+    
+    @Test
+    public void testPrint_ShouldReturnAsciiXC_WhenInputIsNinety() {
+        String expected = 
+            "X   X CCCC\n" +
+            " X X C    \n" +
+            "  X  C    \n" +
+            "  X  C    \n" +
+            " X X C    \n" +
+            "X   X CCCC\n";
+        String actual = RomanPrinter.print(90);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testPrint_ShouldReturnAsciiC_WhenInputIsOneHundred() {
+        String expected = 
+            " CCCC\n" +
+            "C    \n" +
+            "C    \n" +
+            "C    \n" +
+            "C    \n" +
+            " CCCC\n";
+        String actual = RomanPrinter.print(100);
+        assertEquals(expected, actual);
+    }
 
 @Test
     public void testPrint_ShouldThrowException_WhenInputIsInvalid() {
