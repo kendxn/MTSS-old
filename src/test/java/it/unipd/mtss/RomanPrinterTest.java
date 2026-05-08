@@ -85,6 +85,32 @@ public void testPrint_ShouldReturnAsciiV_WhenInputIsFive() {
         String actual = RomanPrinter.print(20);
         assertEquals(expected, actual);
     }
+    
+    @Test
+    public void testPrint_ShouldReturnAsciiXL_WhenInputIsForty() {
+        String expected = 
+            "X   XL    \n" +
+            " X X L    \n" +
+            "  X  L    \n" +
+            "  X  L    \n" +
+            " X X L    \n" +
+            "X   XLLLLL\n";
+        String actual = RomanPrinter.print(40);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testPrint_ShouldReturnAsciiL_WhenInputIsFifty() {
+        String expected = 
+            "L    \n" +
+            "L    \n" +
+            "L    \n" +
+            "L    \n" +
+            "L    \n" +
+            "LLLLL\n";
+        String actual = RomanPrinter.print(50);
+        assertEquals(expected, actual);
+    }
 
 @Test
     public void testPrint_ShouldThrowException_WhenInputIsInvalid() {
