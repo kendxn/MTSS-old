@@ -16,7 +16,8 @@ public class IntegerToRoman {
         keys.put(1, "I");
         keys.put(4, "IV");
         keys.put(5, "V");
-
+        keys.put(9, "IX");
+        keys.put(10, "X");
     }
 
 public static String convert(int number) {

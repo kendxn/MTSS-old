@@ -6,6 +6,7 @@
 package it.unipd.mtss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -20,7 +21,7 @@ import org.junit.jupiter.api.Test;
 
 public class RomanPrinterTest {
     
-
+@Test
 public void testPrint_ShouldReturnAsciiI_WhenInputIsOne() {
         String expected = 
             "  I  \n" +
@@ -45,5 +46,25 @@ public void testPrint_ShouldReturnAsciiV_WhenInputIsFive() {
     String actual = RomanPrinter.print(5);
     assertEquals(expected, actual);
 }
+
+@Test
+    public void testPrint_ShouldReturnAsciiX_WhenInputIsTen() {
+        String expected = 
+            "X   X\n" +
+            " X X \n" +
+            "  X  \n" +
+            "  X  \n" +
+            " X X \n" +
+            "X   X\n";
+        String actual = RomanPrinter.print(10);
+        assertEquals(expected, actual);
+    }
+
+@Test
+    public void testPrint_ShouldThrowException_WhenInputIsInvalid() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            RomanPrinter.print(0);
+        });
+    }
 
 }
