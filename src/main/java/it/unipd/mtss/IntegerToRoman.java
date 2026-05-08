@@ -20,6 +20,8 @@ public class IntegerToRoman {
         keys.put(10, "X");
         keys.put(40, "XL");
         keys.put(50, "L");
+        keys.put(90, "XC");
+        keys.put(100, "C");
     }
 
 public static String convert(int number) {
