@@ -8,6 +8,16 @@ package it.unipd.mtss;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Test di unità per la classe RomanPrinter.
+ * * Rispetto dei criteri A-TRIP:
+ * - (A)utomatic: Integrati nella pipeline di CI.
+ * - (T)horough: Copre la stampa di caratteri singoli (I, V, X) e la loro composizione (VI).
+ * - (R)epeatable: L'output ASCII è costante e verificato tramite asserzioni stringa.
+ * - (I)ndependent: I test non condividono risorse esterne, garantendo indipendenza totale.
+ * - (P)rofessional: Utilizzo del pattern Arrange-Act-Assert per una chiara leggibilità.
+ */
+
 public class RomanPrinterTest {
     
 
