@@ -24,6 +24,8 @@ public class IntegerToRoman {
         keys.put(100, "C");
         keys.put(400, "CD");
         keys.put(500, "D");
+        keys.put(900, "CM");
+        keys.put(1000, "M");
     }
 
 public static String convert(int number) {
