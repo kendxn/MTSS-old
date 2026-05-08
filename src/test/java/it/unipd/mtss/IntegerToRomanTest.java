@@ -66,6 +66,23 @@ public class IntegerToRomanTest {
         assertEquals("X", dieci);
     }
     
+    @Test
+    void convertElevenToTwenty() {    
+        IntegerToRoman ir = new IntegerToRoman();
+        
+        String undici = ir.convert(11);
+        assertEquals("XI", undici);
+        
+        String quattordici = ir.convert(14);
+        assertEquals("XIV", quattordici);
+        
+        String diciannove = ir.convert(19);
+        assertEquals("XIX", diciannove);
+        
+        String venti = ir.convert(20);
+        assertEquals("XX", venti);
+    }
+    
     
     @Test
     void testConvert_ShouldThrowException_WhenInputIsZero() {
